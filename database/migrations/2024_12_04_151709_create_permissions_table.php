@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('permissions', function (Blueprint $table) {
+            $table->id();
+            $table->string('emp_type');
+            $table->string('status');
+            $table->date('created_date');
+            $table->date('Updated_date');
+            $table->timestamps();
+
+            // Add foreign key to 'permissions' table
+            $table->foreign('emp_type')->references('id')->on('type_of_emps')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('permissions');
+    }
+};
