@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('auth')->default('2');
             $table->rememberToken();
             $table->timestamps();
+            //hello
         });
     }
 
@@ -37,7 +38,7 @@ return new class extends Migration
     public function down()
     {
         Schema::disableForeignKeyConstraints();
-        
+
         Schema::dropIfExists('users');
     }
 };
