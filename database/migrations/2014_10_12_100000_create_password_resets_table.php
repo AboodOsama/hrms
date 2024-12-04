@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email')->index();
             $table->string('token');
             $table->timestamp('created_at')->nullable();
+            //hello
         });
     }
 
@@ -30,7 +31,7 @@ return new class extends Migration
     public function down()
     {
         Schema::disableForeignKeyConstraints();
-        
+
         Schema::dropIfExists('password_resets');
     }
 };

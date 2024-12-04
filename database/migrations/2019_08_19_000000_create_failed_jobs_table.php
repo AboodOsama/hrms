@@ -23,6 +23,7 @@ return new class extends Migration
             $table->longText('payload');
             $table->longText('exception');
             $table->timestamp('failed_at')->useCurrent();
+            //hello
         });
     }
 
@@ -34,7 +35,7 @@ return new class extends Migration
     public function down()
     {
         Schema::disableForeignKeyConstraints();
-        
+
         Schema::dropIfExists('failed_jobs');
     }
 };

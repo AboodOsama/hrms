@@ -24,6 +24,7 @@ return new class extends Migration
             $table->timestamp('last_used_at')->nullable();
             $table->timestamp('expires_at')->nullable();
             $table->timestamps();
+            //hello
         });
     }
 
@@ -35,7 +36,7 @@ return new class extends Migration
     public function down()
     {
         Schema::disableForeignKeyConstraints();
-        
+
         Schema::dropIfExists('personal_access_tokens');
     }
 };
