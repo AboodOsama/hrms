@@ -4,11 +4,14 @@ use App\Models\Company;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RequestController;
+use App\Http\Controllers\AttendanceLeaveController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\InstructorController;
+use App\Http\Controllers\VacationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +43,16 @@ Route::middleware(['auth', 'check.auth.value'])->group(function () {
     Route::delete('/users/delete/{user}', [UserController::class, 'destroy'])->name('users.destroy');
     Route::put('/users/{user}/toggle-status', [UserController::class, 'toggleStatus'])->name('users.toggle-status');
 
+
+    // راوتات طلباتي
+    Route::get('/requests/RequestHome', [VacationController::class, 'index'])->name('RequestHome');
+    Route::get('/vacations/create', [VacationController::class, 'create'])->name('VacationRequest');
+    Route::post('/vacations/store', [VacationController::class, 'store']);
+    Route::get('/users/{user}/edit', [UserController::class, 'edit']);
+    Route::put('/users/{user}/update', [UserController::class, 'update']);
+    Route::delete('/users/delete/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+    Route::put('/users/{user}/toggle-status', [UserController::class, 'toggleStatus'])->name('users.toggle-status');
+
     //  راوتات إدارة الشركات
     Route::get('/company/ListCompanies', [CompanyController::class, 'index'])->name('ListCompanies');
     Route::get('/company/create', [CompanyController::class, 'create'])->name('CompanyAdd');
@@ -47,6 +60,15 @@ Route::middleware(['auth', 'check.auth.value'])->group(function () {
     Route::get('/company/{company}/edit', [CompanyController::class, 'edit']);
     Route::put('/company/{company}/update', [CompanyController::class, 'update']);
     Route::delete('/company/delete/{company}', [CompanyController::class, 'destroy'])->name('company.destroy');
+
+
+    Route::get('/vacation/index', [VacationController::class, 'index'])->name('Listpersonorder');
+    Route::post('/vacation/store', [VacationController::class, 'store']);
+    Route::get('/vacation/create', [VacationController::class, 'create'])->name('Vacation');
+
+
+
+
 });
 
 

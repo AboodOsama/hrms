@@ -12,7 +12,7 @@ class AttendanceLeaveController extends Controller
      */
     public function index()
     {
-        //
+        //z
     }
 
     /**

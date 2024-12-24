@@ -47,6 +47,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `profile_img`, `status`, `auth`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'أحمد عبدالملك', 'ahmed@womyemen.com', NULL, '$2y$10$JzEmlTStwdPusZ3Cjzvt9.iNQpBlLxF5IxB9gyBjx52y/kMqvMCoq', 'user_1_1711261592.jpg', 'active', '1', NULL, '2024-03-23 07:01:51', '2024-08-28 04:02:42'),
+(3, 'AbdullaOsama', 'abdulla@osama.com', NULL, '$2y$10$JzEmlTStwdPusZ3Cjzvt9.iNQpBlLxF5IxB9gyBjx52y/kMqvMCoq', 'user_1_1711261592.jpg', 'active', '1', NULL, '2024-03-23 07:01:51', '2024-08-28 04:02:42'),
 (5, 'عبدالرحمن ملهي', 'abdu@womyemen.com', NULL, '$2y$10$q82EaPsf90dc9dAaoX0XceBetLBpKemRx4XS0oazVN2zA7hH6ms.6', 'user_5_1725090541.PNG', 'active', '1', NULL, '2024-03-24 03:28:56', '2024-09-03 14:54:29'),
 (6, 'Osama Abdullah', 'osama@gmail.com', NULL, '$2y$10$fpoHGKmwyL6z2sZMa/mMvOFm/enWY32hwjDd8EMCzAclac5bN1N42', '8b7f11c3-f64c-40b0-ba8b-cf7dd76fe032.jpg', 'active', '2', NULL, '2024-09-05 11:19:40', '2024-09-05 11:19:40'),
 (7, 'محمد أحمد علي', 'ss@gmail.com', NULL, '$2y$10$/31SpYVFZUHSF.xQtsH1EeSMAks6xxVh1Fsp8pR9h70eXC2RPi3ve', 'user.png', 'active', '2', NULL, '2024-10-29 17:17:13', '2024-10-29 17:17:13'),

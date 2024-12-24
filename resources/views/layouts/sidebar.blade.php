@@ -34,8 +34,20 @@
                             </ul>
                         </li>
 
-                                  </li>
+                        
                         <li class="sidebar-list">
+                            <a class="sidebar-link sidebar-title" href="#">
+                                <i class="icofont icofont-users"></i>
+                                <span class="">طلباتي</span>
+                            </a>
+                            <ul class="sidebar-submenu">
+                                <li><a href="{{ route('VacationRequest') }}">إنشاء طلب اجازة</a></li>
+                                {{-- <li><a href="{{ route('VacationsList') }}">إدارة المستخدمين</a></li> --}}
+                            </ul>
+                        </li>
+
+                                  </li>
+                        {{-- <li class="sidebar-list">
                             <a class="sidebar-link sidebar-title" href="#">
                                 <i class="icofont icofont-users"></i>
                                 <span class="">إدارة الأقسام</span>
@@ -44,17 +56,17 @@
                                 <li><a href="">إضافة مستخدم</a></li>
                                 <li><a href="">إدارة المستخدمين</a></li>
                             </ul>
-                        </li>
-                        {{-- <li class="sidebar-list">
-                            <a class="sidebar-link sidebar-title" href="#">
-                                <i class="icofont icofont-building-alt"></i>
-                                <span class="">الشركات</span>
-                            </a>
-                            <ul class="sidebar-submenu">
-                                <li><a href="{{ route('CompanyAdd') }}">إضافة شركة</a></li>
-                                <li><a href="{{ route('ListCompanies') }}">إدارة الشركات</a></li>
-                            </ul>
                         </li> --}}
+                        <li class="sidebar-list">
+                            <a class="sidebar-link sidebar-title" href="{{ route('Listpersonorder') }}">
+                                <i class="icofont icofont-building-alt"></i>
+                                <span class="">شخصي</span>
+                            </a>
+                            {{-- <ul class="sidebar-submenu">
+                                <li><a href="{{ route('VacationAdd') }}">Vacation</a></li>
+                                <li><a href="{{ route('ListCompanies') }}">Permission</a></li>
+                            </ul> --}}
+                        </li>
 
                     @endif
 

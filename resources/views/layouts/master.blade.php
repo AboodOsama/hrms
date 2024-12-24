@@ -19,7 +19,7 @@ $user = Auth::user();
   </head>
   {{-- @dd(Route::current()->getName()); --}}
   <body @if(Route::current()->getName() == 'index') onload="startTime()" @elseif (Route::current()->getName() == 'button-builder') class="button-builder" @endif>
-    <div class="loader-wrapper">
+    {{-- <div class="loader-wrapper">
       <div class="loader-index"><span></span></div>
       <svg>
         <defs></defs>
@@ -28,7 +28,7 @@ $user = Auth::user();
           <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"> </fecolormatrix>
         </filter>
       </svg>
-    </div>
+    </div> --}}
     <!-- tap on top starts-->
     <div class="tap-top"><i data-feather="chevrons-up"></i></div>
     <!-- tap on tap ends-->
